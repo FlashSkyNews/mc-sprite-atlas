@@ -1,5 +1,5 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Alle Vanilla-Sprites von Minecraft ab 1.21.9 mit fertigen MiniMessage-Tags für Paper (&lt;sprite:…&gt;), filterbar nach Atlas und Animation. Dazu ein MOTD-Editor mit Live-Vorschau in Originalschrift, Server-Abruf, Zentrieren und Sonderzeichen.">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Every vanilla Minecraft sprite from 1.21.9 on with ready-to-use MiniMessage tags for Paper (&lt;sprite:…&gt;), filterable by atlas and animation. Plus a MOTD editor with a live server-list preview in the original font, server fetching, centering and special characters.">
 <link rel="canonical" href="https://motdpreviewer.kay0.io/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#f0b84a">
@@ -7,23 +7,24 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Sprite-Atlas">
-<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Sprite Atlas">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
 <meta property="og:url" content="https://motdpreviewer.kay0.io/">
-<meta property="og:title" content="Sprite-Atlas: Minecraft-Sprites als MiniMessage-Tags">
-<meta property="og:description" content="Alle Vanilla-Sprites ab 1.21.9 als MiniMessage-Tags für Paper, plus MOTD-Editor mit Live-Vorschau in Originalschrift und Server-Abruf.">
+<meta property="og:title" content="Sprite Atlas: Minecraft sprites as MiniMessage tags">
+<meta property="og:description" content="Every vanilla sprite from 1.21.9 on as a MiniMessage tag for Paper, plus a MOTD editor with a live server-list preview in the original font.">
 <meta property="og:image" content="https://motdpreviewer.kay0.io/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Sprite-Atlas: Minecraft-Sprites mit MiniMessage-Tag und MOTD-Vorschau einer Serverliste">
+<meta property="og:image:alt" content="Sprite Atlas: Minecraft sprites with MiniMessage tags and a MOTD server-list preview">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sprite-Atlas: Minecraft-Sprites als MiniMessage-Tags">
-<meta name="twitter:description" content="Alle Vanilla-Sprites ab 1.21.9 als MiniMessage-Tags für Paper, plus MOTD-Editor mit Live-Vorschau in Originalschrift und Server-Abruf.">
+<meta name="twitter:title" content="Sprite Atlas: Minecraft sprites as MiniMessage tags">
+<meta name="twitter:description" content="Every vanilla sprite from 1.21.9 on as a MiniMessage tag for Paper, plus a MOTD editor with a live server-list preview in the original font.">
 <meta name="twitter:image" content="https://motdpreviewer.kay0.io/og.png">
 <link rel="preload" href="/data/versions.json" as="fetch" crossorigin>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Sprite-Atlas", "url": "https://motdpreviewer.kay0.io/", "description": "Alle Vanilla-Sprites ab 1.21.9 als MiniMessage-Tags für Paper, plus MOTD-Editor mit Live-Vorschau in Originalschrift und Server-Abruf.", "applicationCategory": "DeveloperApplication", "operatingSystem": "Web", "inLanguage": "de", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "image": "https://motdpreviewer.kay0.io/og.png", "codeRepository": "https://github.com/FlashSkyNews/mc-sprite-atlas", "keywords": "Minecraft, MiniMessage, Paper, Sprite, MOTD, Adventure, Texturen, Serverliste"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Sprite Atlas", "url": "https://motdpreviewer.kay0.io/", "description": "Every vanilla sprite from 1.21.9 on as a MiniMessage tag for Paper, plus a MOTD editor with a live server-list preview in the original font.", "applicationCategory": "DeveloperApplication", "operatingSystem": "Web", "inLanguage": ["en", "de"], "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "image": "https://motdpreviewer.kay0.io/og.png", "codeRepository": "https://github.com/FlashSkyNews/mc-sprite-atlas", "keywords": "Minecraft, MiniMessage, Paper, Adventure, sprite, MOTD, MOTD editor, server list, textures"}</script>
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
-<title>Sprite-Atlas: Minecraft-Sprites als MiniMessage-Tags &amp; MOTD-Editor</title>
+<title>Sprite Atlas: Minecraft sprites as MiniMessage tags &amp; MOTD editor</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,8 +66,15 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-body); f
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
 .wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); max-width: 1500px; margin: 0 auto; }
 header.top { padding-block: 22px 16px; display: grid; position: relative; }
-.gh { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: 26px; display: inline-flex; align-items: center; gap: 7px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--fg); text-decoration: none; font-size: 13px; font-weight: 500; }
+.top-actions { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: 26px; display: flex; gap: 8px; align-items: stretch; }
+.gh { display: inline-flex; align-items: center; gap: 7px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--fg); text-decoration: none; font-size: 13px; font-weight: 500; }
 .gh:hover { border-color: var(--accent); }
+.lang { display: flex; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+.lang button { font: inherit; font-size: 12px; font-weight: 600; letter-spacing: .04em; padding: 4px 10px; border: 0; background: var(--surface); color: var(--muted); cursor: pointer; }
+.lang button + button { border-left: 1px solid var(--line); }
+.lang button[aria-pressed="true"] { background: var(--accent-soft); color: var(--fg); }
+.lang button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+@media (max-width: 640px) { .top-actions { top: 22px; } }
 .gh:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 @media (max-width: 640px) { .gh span { display: none; } .gh { padding: 7px; } }
 .ver-wrap select { margin-right: 0; }
@@ -156,6 +164,7 @@ header.top { grid-template-columns: minmax(0, 1fr); align-items: start; gap: 22p
 
 h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(28px, 4vw, 40px); line-height: 1.05; margin: 0; letter-spacing: .5px; text-wrap: balance; }
 h1 span { color: var(--accent); }
+h1 [data-i18n="title"] { color: var(--fg); }
 .ver-wrap { position: relative; display: inline-block; }
 .ver { font: inherit; color: var(--accent); background: transparent; border: 0; border-bottom: 3px dotted var(--accent); padding: 0 34px 0 2px; margin: 0; cursor: pointer; appearance: none; -webkit-appearance: none; border-radius: 0; line-height: 1.05; max-width: none; }
 .ver-wrap::after { content: ""; position: absolute; right: 8px; top: 50%; width: 12px; height: 12px; margin-top: -9px; border-right: 4px solid var(--accent); border-bottom: 4px solid var(--accent); transform: rotate(45deg); pointer-events: none; }
@@ -257,115 +266,118 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
 </style>
 
 <header class="top wrap">
- <a class="gh" href="https://github.com/FlashSkyNews/mc-sprite-atlas" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>Quellcode auf GitHub</span></a>
+ <div class="top-actions">
+ <a class="gh" href="https://github.com/FlashSkyNews/mc-sprite-atlas" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span data-i18n="gh">Source on GitHub</span></a>
+  <div class="lang" role="group" data-i18n-aria="langAria" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="de" aria-pressed="false">DE</button></div>
+ </div>
  <div class="intro">
-  <h1>Sprite-Atlas <span class="ver-wrap"><select id="ver" class="ver" aria-label="Minecraft-Version"></select></span></h1>
+  <h1><span data-i18n="title">Sprite Atlas</span> <span class="ver-wrap"><select id="ver" class="ver" data-i18n-aria="ver.aria" aria-label="Minecraft version"></select></span></h1>
  </div>
 </header>
 
 <div class="bar">
   <div class="wrap">
-    <div class="row"><span class="label">Typ</span><div class="row" id="atlases"></div></div>
+    <div class="row"><span class="label" data-i18n="type">Type</span><div class="row" id="atlases"></div></div>
     <div class="row">
-      <span class="label">Animiert</span>
+      <span class="label" data-i18n="anim">Animated</span>
       <div class="row" id="animf">
-        <button class="chip" data-v="all" aria-pressed="true">Alle</button>
-        <button class="chip animc" data-v="yes" aria-pressed="false">Animiert <span class="n" id="nAnim"></span></button>
-        <button class="chip" data-v="no" aria-pressed="false">Statisch <span class="n" id="nStatic"></span></button>
+        <button class="chip" data-v="all" aria-pressed="true"><span data-i18n="all">All</span></button>
+        <button class="chip animc" data-v="yes" aria-pressed="false"><span data-i18n="animated">Animated</span> <span class="n" id="nAnim"></span></button>
+        <button class="chip" data-v="no" aria-pressed="false"><span data-i18n="static">Static</span> <span class="n" id="nStatic"></span></button>
       </div>
     </div>
     <div class="row">
-      <input type="search" id="q" placeholder="Suchen, z. B. heart, diamond, flame …" aria-label="Sprites durchsuchen">
-      <select id="sub" aria-label="Unterordner"></select>
+      <input type="search" id="q" data-i18n-ph="searchPh" data-i18n-aria="searchAria" placeholder="Search, e.g. heart, diamond, flame …" aria-label="Search sprites">
+      <select id="sub" data-i18n-aria="subAria" aria-label="Subfolder"></select>
       <span class="count" id="count"></span>
     </div>
   </div>
 </div>
 
-<noscript><p class="wrap">Der Sprite-Atlas braucht JavaScript. Er listet alle Vanilla-Sprites von Minecraft ab 1.21.9 mit MiniMessage-Tags wie &lt;sprite:items:item/diamond&gt; und enthält einen MOTD-Editor mit Vorschau der Serverliste.</p></noscript>
+<noscript><p class="wrap">Sprite Atlas needs JavaScript. It lists every vanilla Minecraft sprite from 1.21.9 on with MiniMessage tags like &lt;sprite:items:item/diamond&gt; and includes a MOTD editor with a server-list preview.</p></noscript>
 <main class="wrap layout" id="layout">
   <div class="list">
   <div class="grid" id="grid"></div>
-  <p class="empty" id="empty" hidden>Keine Sprites für diese Filter. Setz einen Filter zurück oder ändere die Suche.</p>
+  <p class="empty" id="empty" data-i18n="empty" hidden>No sprites match these filters. Reset a filter or change the search.</p>
   <div class="more"><button class="chip" id="more" hidden>Mehr anzeigen</button></div>
   </div>
   <aside class="panel" id="panel">
-    <div class="panel-head"><h2>MOTD-Editor</h2><span class="hint">Serverliste · GUI-Skalierung 2 · Original-Schrift</span><button class="panel-toggle" id="panelToggle" type="button" aria-controls="panelBody">Einklappen</button></div>
+    <div class="panel-head"><h2 data-i18n="editor">MOTD editor</h2><span class="hint" data-i18n="editorHint">Server list · GUI scale 2 · original font</span><button class="panel-toggle" id="panelToggle" type="button" aria-controls="panelBody">Collapse</button></div>
     <div class="panel-body" id="panelBody">
-  <section class="motd" aria-label="MOTD-Editor">
+  <section class="motd" data-i18n-aria="editor" aria-label="MOTD editor">
     <div class="mc-scroll">
       <div class="mc-entry">
         <img class="mc-icon" src="data:image/png;base64,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" alt="Server-Icon">
         <div style="min-width:0">
           <div class="mc-top"><span class="mc-name" id="mcName"></span><span class="mc-ping"><span id="mcPlayers"></span><img id="mcPing" alt="Ping"></span></div>
-          <div class="mc-motd" id="mcMotd" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" aria-label="MOTD, direkt bearbeitbar"></div>
+          <div class="mc-motd" id="mcMotd" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-i18n-aria="motdAria" aria-label="MOTD, editable"></div>
         </div>
       </div>
     </div>
-    <p class="ed-hint">Tipp direkt in die Vorschau, maximal zwei Zeilen. Markierten Text formatierst du mit der Leiste, per Rechtsklick oder mit Strg+B/I/U. Kopieren aus der Vorschau liefert MiniMessage.</p>
+    <p class="ed-hint" data-i18n="edHint"></p>
     <div>
-      <div class="tools" role="toolbar" aria-label="MiniMessage-Werkzeuge">
-        <div class="tg"><span class="lbl">Stil</span>
-          <button class="tb" type="button" data-wrap="b" title="Fett &lt;b&gt;"><b>B</b></button>
-          <button class="tb" type="button" data-wrap="i" title="Kursiv &lt;i&gt;"><i>I</i></button>
-          <button class="tb" type="button" data-wrap="u" title="Unterstrichen &lt;u&gt;"><u>U</u></button>
-          <button class="tb" type="button" data-wrap="st" title="Durchgestrichen &lt;st&gt;"><s>S</s></button>
-          <button class="tb" type="button" data-wrap="obf" title="Obfuscated &lt;obf&gt;">?#</button>
+      <div class="tools" role="toolbar" data-i18n-aria="toolsAria" aria-label="MiniMessage tools">
+        <div class="tg"><span class="lbl" data-i18n="lStyle">Style</span>
+          <button class="tb" type="button" data-wrap="b" data-i18n-title="tBold"><b>B</b></button>
+          <button class="tb" type="button" data-wrap="i" data-i18n-title="tItalic"><i>I</i></button>
+          <button class="tb" type="button" data-wrap="u" data-i18n-title="tUnder"><u>U</u></button>
+          <button class="tb" type="button" data-wrap="st" data-i18n-title="tStrike"><s>S</s></button>
+          <button class="tb" type="button" data-wrap="obf" data-i18n-title="tObf">?#</button>
         </div>
-        <div class="tg" id="swatches"><span class="lbl">Farbe</span></div>
-        <div class="tg"><input type="color" id="hexPick" value="#ff8800" title="Eigene Farbe"><button class="tb" type="button" id="hexApply" title="Markierten Text in dieser Farbe">Hex</button></div>
-        <div class="tg"><span class="lbl">Verlauf</span>
-          <input type="color" id="g1" value="#5ee7ff" title="Startfarbe"><input type="color" id="g2" value="#a07cff" title="Endfarbe">
-          <button class="tb" type="button" id="gApply">Verlauf</button>
+        <div class="tg" id="swatches"><span class="lbl" data-i18n="lColor">Color</span></div>
+        <div class="tg"><input type="color" id="hexPick" value="#ff8800" data-i18n-title="hexTitle"><button class="tb" type="button" id="hexApply" data-i18n-title="hexApply">Hex</button></div>
+        <div class="tg"><span class="lbl" data-i18n="lGrad">Gradient</span>
+          <input type="color" id="g1" value="#5ee7ff" data-i18n-title="g1"><input type="color" id="g2" value="#a07cff" data-i18n-title="g2">
+          <button class="tb" type="button" id="gApply" data-i18n="grad">Gradient</button>
           <button class="tb" type="button" data-wrap="rainbow">Rainbow</button>
-          <select id="pride" aria-label="Pride-Verlauf"><option value="">Pride …</option></select>
+          <select id="pride" data-i18n-aria="prideAria" aria-label="Pride gradient"><option value="">Pride …</option></select>
         </div>
-        <div class="tg"><span class="lbl">Einfügen</span>
-          <button class="tb" type="button" data-ins="<newline>" title="Zeilenumbruch">↵</button>
-          <button class="tb" type="button" id="alignC" title="Zeile mit Leerzeichen zentrieren (in der Vorschau: Zeilen der Markierung, sonst alle)">Zentrieren</button>
-          <button class="tb" type="button" id="alignR" title="Zeile mit Leerzeichen rechtsbündig ausrichten">Rechtsbündig</button>
-          <button class="tb" type="button" data-ins="<reset>" title="Alle Stile zurücksetzen">Reset</button>
-          <button class="tb" type="button" data-wrap="shadow:#000000:0" title="Ohne Schatten">Schatten aus</button>
-          <button class="tb" type="button" id="charBtn" aria-expanded="false" aria-controls="charPick" title="Sonderzeichen der Minecraft-Schrift">Zeichen ☺</button>
-          <button class="tb" type="button" id="clearFmt" title="Alle Tags aus der Markierung entfernen">Tags entfernen</button>
+        <div class="tg"><span class="lbl" data-i18n="lInsert">Insert</span>
+          <button class="tb" type="button" data-ins="<newline>" data-i18n-title="tNewline">↵</button>
+          <button class="tb" type="button" id="alignC" data-i18n-title="centerTitle" data-i18n="center">Center</button>
+          <button class="tb" type="button" id="alignR" data-i18n-title="rightTitle" data-i18n="right">Right-align</button>
+          <button class="tb" type="button" data-ins="<reset>" data-i18n-title="resetTitle">Reset</button>
+          <button class="tb" type="button" data-wrap="shadow:#000000:0" data-i18n-title="noShadowTitle" data-i18n="noShadow">No shadow</button>
+          <button class="tb" type="button" id="charBtn" aria-expanded="false" aria-controls="charPick" data-i18n-title="charsTitle" data-i18n="chars">Symbols ☺</button>
+          <button class="tb" type="button" id="clearFmt" data-i18n-title="clearTitle" data-i18n="clearTags">Remove tags</button>
         </div>
       </div>
-      <div class="charpick" id="charPick" hidden><div class="tabs"></div><div class="cgrid" id="cgrid"></div><div class="cname" id="cname">Klick fügt das Zeichen an der Cursor-Position ein.</div></div>
-      <div class="ed-label">Quelltext (MiniMessage)</div>
-      <div class="ed"><pre id="motdHl" aria-hidden="true"></pre><textarea id="motdIn" spellcheck="false" aria-label="MOTD in MiniMessage"></textarea></div>
+      <div class="charpick" id="charPick" hidden><div class="tabs"></div><div class="cgrid" id="cgrid"></div><div class="cname" id="cname" data-i18n="cname"></div></div>
+      <div class="ed-label" data-i18n="source">Source (MiniMessage)</div>
+      <div class="ed"><pre id="motdHl" aria-hidden="true"></pre><textarea id="motdIn" spellcheck="false" data-i18n-aria="sourceAria" aria-label="MOTD in MiniMessage"></textarea></div>
     </div>
     <div class="row">
-      <input id="mName" aria-label="Servername" placeholder="Servername">
-      <input id="mOn" type="number" min="0" aria-label="Spieler online">
-      <input id="mMax" type="number" min="0" aria-label="Maximale Spieler">
-      <button class="copy" id="motdCopy" type="button">MiniMessage kopieren</button>
+      <input id="mName" data-i18n-aria="serverName" data-i18n-ph="serverName" aria-label="Server name" placeholder="Server name">
+      <input id="mOn" type="number" min="0" data-i18n-aria="online" aria-label="Players online">
+      <input id="mMax" type="number" min="0" data-i18n-aria="max" aria-label="Max players">
+      <button class="copy" id="motdCopy" type="button" data-i18n="copyMM">Copy MiniMessage</button>
     </div>
     <div class="status" id="motdStatus"></div>
     <details class="fetch" id="fetch" open>
-      <summary>Server abrufen <span>· Icon, MOTD und Spieler von einem echten Server</span></summary>
+      <summary><span data-i18n="fetchSum">Fetch server</span> <span data-i18n="fetchSub"></span></summary>
       <div class="fetch-body">
         <form class="row" id="fForm">
-          <input type="text" id="fHost" placeholder="z. B. hypixel.net oder play.example.de:25565" aria-label="Server-Adresse" autocomplete="off" spellcheck="false">
-          <button class="tb" type="submit" id="fGo">Abrufen</button>
+          <input type="text" id="fHost" data-i18n-ph="hostPh" data-i18n-aria="hostAria" placeholder="e.g. hypixel.net or play.example.com:25565" aria-label="Server address" autocomplete="off" spellcheck="false">
+          <button class="tb" type="submit" id="fGo" data-i18n="fetchBtn">Fetch</button>
         </form>
-        <div class="status" id="fStatus">Fragt den Server direkt per Server List Ping ab, auch über SRV-Einträge.</div>
+        <div class="status" id="fStatus" data-i18n="fetchInfo"></div>
         <details id="fManual">
-          <summary class="hint">Ohne Abruf-Server: Antwort manuell einfügen</summary>
+          <summary class="hint" data-i18n="manualSum"></summary>
           <ol>
-            <li><a id="fOpen" href="https://api.mcsrvstat.us/3/hypixel.net" target="_blank" rel="noopener">Status bei mcsrvstat.us öffnen ↗</a></li>
-            <li>Dort alles kopieren (Strg+A, Strg+C). In Firefox vorher auf „Rohdaten“ klicken.</li>
-            <li>Hier einfügen.</li>
+            <li><a id="fOpen" href="https://api.mcsrvstat.us/3/hypixel.net" target="_blank" rel="noopener" data-i18n="manual1"></a></li>
+            <li data-i18n="manual2"></li>
+            <li data-i18n="manual3"></li>
           </ol>
-          <textarea id="fPaste" spellcheck="false" placeholder="Antwort (JSON) hier einfügen" aria-label="Status-Antwort einfügen"></textarea>
+          <textarea id="fPaste" spellcheck="false" data-i18n-ph="pastePh" data-i18n-aria="pasteAria" placeholder="Paste the response (JSON) here" aria-label="Paste status response"></textarea>
         </details>
         <div class="row">
-          <label class="tb" for="fIcon">Eigenes Icon hochladen</label><input type="file" id="fIcon" accept="image/png,image/jpeg,image/gif,image/webp" hidden>
-          <button class="tb" type="button" id="fResetIcon">Standard-Icon</button>
+          <label class="tb" for="fIcon" data-i18n="uploadIcon">Upload custom icon</label><input type="file" id="fIcon" accept="image/png,image/jpeg,image/gif,image/webp" hidden>
+          <button class="tb" type="button" id="fResetIcon" data-i18n="defaultIcon">Default icon</button>
         </div>
       </div>
     </details>
     <details class="help" id="help">
-      <summary>MiniMessage-Hilfe <span>· Klick auf ein Beispiel fügt es ein</span></summary>
+      <summary><span data-i18n="helpSum">MiniMessage help</span> <span data-i18n="helpSub"></span></summary>
       <div class="help-body" id="helpBody"></div>
     </details>
   </section>
@@ -373,17 +385,144 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
   </aside>
 </main>
 
-<footer class="wrap">
-  Quelle: Vanilla-Assets von Minecraft <span id="verFoot">26.2</span> (<code>assets/minecraft/textures</code> und <code>atlases/*.json</code> aus der Client-JAR). Sprites von Mods oder Resource Packs sind nicht enthalten. Rüstungsbesatz-Sprites (<code>armor_trims</code>) und die Farbvarianten der Item-Trims werden im Spiel aus Paletten erzeugt und fehlen deshalb. Animationen laufen mit 20 Ticks pro Sekunde nach den <code>.mcmeta</code>-Angaben.
- Quellcode und täglicher Update-Job: <a href="https://github.com/FlashSkyNews/mc-sprite-atlas" target="_blank" rel="noopener">FlashSkyNews/mc-sprite-atlas</a>.
+<footer class="wrap" id="foot">
 </footer>
 
-<div class="ctx" id="ctx" role="menu" aria-label="Formatierung" hidden></div>
+<div class="ctx" id="ctx" role="menu" data-i18n-aria="ctxAria" aria-label="Formatting" hidden></div>
 <script id="data" type="application/json">[]</script>
 <script>
 (() => {
   let ALL = JSON.parse(document.getElementById('data').textContent);
-  const LABELS = { blocks: 'Blöcke', items: 'Items', gui: 'GUI', particles: 'Partikel', paintings: 'Gemälde', shield_patterns: 'Schildmuster', banner_patterns: 'Bannermuster', map_decorations: 'Kartensymbole', decorated_pot: 'Verzierte Krüge', chests: 'Truhen', shulker_boxes: 'Shulker-Kisten', celestials: 'Himmel', mob_effects: 'Effekte', signs: 'Schilder', beds: 'Betten' };
+  /* ---------- Sprachen: Englisch ist Standard, Deutsch umschaltbar ---------- */
+  const STR = {
+    en: {
+      title: 'Sprite Atlas', 'ver.aria': 'Minecraft version', gh: 'Source on GitHub', langAria: 'Language',
+      type: 'Type', anim: 'Animated', all: 'All', animated: 'Animated', static: 'Static',
+      searchPh: 'Search, e.g. heart, diamond, flame …', searchAria: 'Search sprites', subAria: 'Subfolder',
+      subAll: n => `All subfolders (${n})`, subTop: '(top level)',
+      empty: 'No sprites match these filters. Reset a filter or change the search.',
+      more: n => `Show more (${n} more)`, tagAnim: 'animated', frames: 'frames', animAria: 'animated',
+      copy: 'Copy', copied: 'Copied', selected: 'Selected', insMotd: 'Insert into the MOTD',
+      loading: v => `Loading ${v} …`, loadFail: v => `Couldn't load version ${v}.`,
+      'atlas.blocks': 'Blocks', 'atlas.items': 'Items', 'atlas.gui': 'GUI', 'atlas.particles': 'Particles', 'atlas.paintings': 'Paintings',
+      'atlas.shield_patterns': 'Shield patterns', 'atlas.banner_patterns': 'Banner patterns', 'atlas.map_decorations': 'Map icons',
+      'atlas.decorated_pot': 'Decorated pots', 'atlas.chests': 'Chests', 'atlas.shulker_boxes': 'Shulker boxes', 'atlas.celestials': 'Sky',
+      'atlas.mob_effects': 'Effects', 'atlas.signs': 'Signs', 'atlas.beds': 'Beds',
+      editor: 'MOTD editor', editorHint: 'Server list · GUI scale 2 · original font', collapse: 'Collapse', collapseWide: 'Collapse »', expand: 'Open', expandWide: '«',
+      motdAria: 'MOTD, editable',
+      edHint: 'Type straight into the preview, two lines max. Format selected text with the toolbar, by right-clicking, or with Ctrl+B/I/U. Copying from the preview gives you MiniMessage.',
+      toolsAria: 'MiniMessage tools', lStyle: 'Style', lColor: 'Color', lGrad: 'Gradient', lInsert: 'Insert',
+      tBold: 'Bold <b>', tItalic: 'Italic <i>', tUnder: 'Underlined <u>', tStrike: 'Strikethrough <st>', tObf: 'Obfuscated <obf>',
+      hexTitle: 'Custom color', hexApply: 'Color the selection with this color', g1: 'Start color', g2: 'End color', grad: 'Gradient',
+      prideAria: 'Pride gradient', prideOpt: 'Pride …', tNewline: 'Line break',
+      center: 'Center', centerTitle: 'Center the line with spaces (in the preview: the selected lines, otherwise all)',
+      right: 'Right-align', rightTitle: 'Right-align the line with spaces', resetTitle: 'Reset all styles',
+      noShadow: 'No shadow', noShadowTitle: 'Without shadow', chars: 'Symbols ☺', charsTitle: 'Special characters of the Minecraft font',
+      clearTags: 'Remove tags', clearTitle: 'Remove all tags from the selection', cname: 'Click to insert the character at the cursor.',
+      source: 'Source (MiniMessage)', sourceAria: 'MOTD in MiniMessage', serverName: 'Server name', online: 'Players online', max: 'Max players',
+      copyMM: 'Copy MiniMessage', defaultServer: 'Minecraft Server',
+      fetchSum: 'Fetch server', fetchSub: '· Icon, MOTD and players from a real server', hostPh: 'e.g. hypixel.net or play.example.com:25565',
+      hostAria: 'Server address', fetchBtn: 'Fetch', fetching: 'Fetching …',
+      fetchInfo: 'Queries the server directly via Server List Ping, including SRV records.',
+      manualSum: 'No fetch server? Paste the response manually', manual1: 'Open status on mcsrvstat.us ↗',
+      manual2: 'Copy everything there (Ctrl+A, Ctrl+C). In Firefox, click “Raw Data” first.', manual3: 'Paste it here.',
+      pastePh: 'Paste the response (JSON) here', pasteAria: 'Paste status response', uploadIcon: 'Upload custom icon', defaultIcon: 'Default icon',
+      helpSum: 'MiniMessage help', helpSub: '· Click an example to insert it', insert: 'Insert', ctxAria: 'Formatting',
+      footer: v => `Source: vanilla assets of Minecraft <span id="verFoot">${v}</span> (<code>assets/minecraft/textures</code> and <code>atlases/*.json</code> from the client JAR). Sprites from mods or resource packs aren't included. Armor trim sprites (<code>armor_trims</code>) and the color variants of item trims are generated in-game from palettes, so they're missing. Animations run at 20 ticks per second as defined in the <code>.mcmeta</code> files. Source code and daily update job: <a href="https://github.com/FlashSkyNews/mc-sprite-atlas" target="_blank" rel="noopener">FlashSkyNews/mc-sprite-atlas</a>.`,
+      notFound: ' (not found)', head: n => `Player head: ${n} (skins aren't loaded here)`,
+      tooMany: n => `The server list only shows 2 lines, your text needs ${n}. The rest gets cut off.`,
+      unknownTags: 'Unknown tags are shown as text: ',
+      motdInfo: 'Hover, click and font tags are parsed but have no effect in the server list. Legacy codes like <code>&amp;a</code> work too.',
+      maxLines: 'The server list shows two lines max. There is no room for that.', noAlign: 'There is no text in this line to align yet.',
+      cut: 'Cut.', copiedMM: 'Copied as MiniMessage.', copyBlocked: 'Copying is blocked here. Use Ctrl+C.', pasteBlocked: 'Pasting from the menu is blocked here. Use Ctrl+V.',
+      colorAria: k => 'Color ' + k,
+      ctx: { cut: 'Cut', copy: 'Copy as MiniMessage', paste: 'Paste', all: 'Select all', bold: 'Bold', italic: 'Italic', underlined: 'Underlined', strike: 'Strikethrough',
+        obf: 'Obfuscated', gradient: 'Gradient', rainbow: 'Rainbow', noshadow: 'No shadow', clear: 'Remove formatting', center: 'Center line', right: 'Right-align line',
+        chars: 'Special characters …', newline: 'Line break', ctrl: 'Ctrl' },
+      charGroups: { 'Symbole': 'Symbols', 'Rahmen & Blöcke': 'Box & blocks', 'Eingekreist': 'Circled', 'Pfeile & Mathe': 'Arrows & math', 'Satzzeichen': 'Punctuation', 'Zahlen': 'Numbers', 'Währung': 'Currency', 'Runen & Gotisch': 'Runes & Gothic' },
+      keys: { 'key.jump': 'Space', 'key.sneak': 'Left Shift', 'key.sprint': 'Left Control', 'key.attack': 'Left Button', 'key.use': 'Right Button' },
+      needHost: 'Enter a server address first.', connecting: h => `Connecting to ${h} …`, fetchFailed: 'Fetch failed.',
+      noAnswer: (h, e) => `${h} isn't responding (${e}).`,
+      noApi: 'No fetch server available. That only works on the hosted version of the page. Use the manual way below.',
+      badJson: "That isn't valid JSON. Copy the whole response from the status tab.", offline: h => `Server ${h} is offline or unreachable.`,
+      noMotd: 'The response has no MOTD. Is it a response from mcsrvstat.us or mcstatus.io?',
+      applied: (name, ver, ms, icon, note) => `Applied: ${name}${ver ? ' · ' + ver : ''}${ms != null ? ' · ' + ms + ' ms' : ''}${icon ? '' : ' · no icon'}${note ? ' · ' + note : ''}. The MOTD is now in the editor.`,
+      iconOk: (w, h) => `Icon applied (${w}×${h}, scaled to 64×64).`, iconBad: "Couldn't read the image. Use a PNG file.", iconReset: 'Default icon restored.',
+      api: { missing_host: 'Enter a server address.', invalid: 'Invalid address.', private: "Private or local addresses aren't queried." },
+      defaultMotd: '<gradient:#5ee7ff:#a07cff><bold>My Server</bold></gradient> <dark_gray>»</dark_gray> <white>Survival 26.2</white> <sprite:items:item/diamond>\n<sprite:gui:hud/heart/full> <yellow>Event on Saturday!</yellow> <gray>|</gray> <rainbow>Join now</rainbow> <obf>!!</obf>',
+      defaultName: 'My Server',
+    },
+    de: {
+      title: 'Sprite-Atlas', 'ver.aria': 'Minecraft-Version', gh: 'Quellcode auf GitHub', langAria: 'Sprache',
+      type: 'Typ', anim: 'Animiert', all: 'Alle', animated: 'Animiert', static: 'Statisch',
+      searchPh: 'Suchen, z. B. heart, diamond, flame …', searchAria: 'Sprites durchsuchen', subAria: 'Unterordner',
+      subAll: n => `Alle Unterordner (${n})`, subTop: '(oberste Ebene)',
+      empty: 'Keine Sprites für diese Filter. Setz einen Filter zurück oder ändere die Suche.',
+      more: n => `Mehr anzeigen (${n} weitere)`, tagAnim: 'animiert', frames: 'Frames', animAria: 'animiert',
+      copy: 'Kopieren', copied: 'Kopiert', selected: 'Markiert', insMotd: 'In die MOTD einfügen',
+      loading: v => `Lade ${v} …`, loadFail: v => `Version ${v} konnte nicht geladen werden.`,
+      'atlas.blocks': 'Blöcke', 'atlas.items': 'Items', 'atlas.gui': 'GUI', 'atlas.particles': 'Partikel', 'atlas.paintings': 'Gemälde',
+      'atlas.shield_patterns': 'Schildmuster', 'atlas.banner_patterns': 'Bannermuster', 'atlas.map_decorations': 'Kartensymbole',
+      'atlas.decorated_pot': 'Verzierte Krüge', 'atlas.chests': 'Truhen', 'atlas.shulker_boxes': 'Shulker-Kisten', 'atlas.celestials': 'Himmel',
+      'atlas.mob_effects': 'Effekte', 'atlas.signs': 'Schilder', 'atlas.beds': 'Betten',
+      editor: 'MOTD-Editor', editorHint: 'Serverliste · GUI-Skalierung 2 · Original-Schrift', collapse: 'Einklappen', collapseWide: 'Einklappen »', expand: 'Öffnen', expandWide: '«',
+      motdAria: 'MOTD, direkt bearbeitbar',
+      edHint: 'Tipp direkt in die Vorschau, maximal zwei Zeilen. Markierten Text formatierst du mit der Leiste, per Rechtsklick oder mit Strg+B/I/U. Kopieren aus der Vorschau liefert MiniMessage.',
+      toolsAria: 'MiniMessage-Werkzeuge', lStyle: 'Stil', lColor: 'Farbe', lGrad: 'Verlauf', lInsert: 'Einfügen',
+      tBold: 'Fett <b>', tItalic: 'Kursiv <i>', tUnder: 'Unterstrichen <u>', tStrike: 'Durchgestrichen <st>', tObf: 'Obfuscated <obf>',
+      hexTitle: 'Eigene Farbe', hexApply: 'Markierten Text in dieser Farbe', g1: 'Startfarbe', g2: 'Endfarbe', grad: 'Verlauf',
+      prideAria: 'Pride-Verlauf', prideOpt: 'Pride …', tNewline: 'Zeilenumbruch',
+      center: 'Zentrieren', centerTitle: 'Zeile mit Leerzeichen zentrieren (in der Vorschau: Zeilen der Markierung, sonst alle)',
+      right: 'Rechtsbündig', rightTitle: 'Zeile mit Leerzeichen rechtsbündig ausrichten', resetTitle: 'Alle Stile zurücksetzen',
+      noShadow: 'Schatten aus', noShadowTitle: 'Ohne Schatten', chars: 'Zeichen ☺', charsTitle: 'Sonderzeichen der Minecraft-Schrift',
+      clearTags: 'Tags entfernen', clearTitle: 'Alle Tags aus der Markierung entfernen', cname: 'Klick fügt das Zeichen an der Cursor-Position ein.',
+      source: 'Quelltext (MiniMessage)', sourceAria: 'MOTD in MiniMessage', serverName: 'Servername', online: 'Spieler online', max: 'Maximale Spieler',
+      copyMM: 'MiniMessage kopieren', defaultServer: 'Minecraft-Server',
+      fetchSum: 'Server abrufen', fetchSub: '· Icon, MOTD und Spieler von einem echten Server', hostPh: 'z. B. hypixel.net oder play.example.de:25565',
+      hostAria: 'Server-Adresse', fetchBtn: 'Abrufen', fetching: 'Frage ab …',
+      fetchInfo: 'Fragt den Server direkt per Server List Ping ab, auch über SRV-Einträge.',
+      manualSum: 'Ohne Abruf-Server: Antwort manuell einfügen', manual1: 'Status bei mcsrvstat.us öffnen ↗',
+      manual2: 'Dort alles kopieren (Strg+A, Strg+C). In Firefox vorher auf „Rohdaten“ klicken.', manual3: 'Hier einfügen.',
+      pastePh: 'Antwort (JSON) hier einfügen', pasteAria: 'Status-Antwort einfügen', uploadIcon: 'Eigenes Icon hochladen', defaultIcon: 'Standard-Icon',
+      helpSum: 'MiniMessage-Hilfe', helpSub: '· Klick auf ein Beispiel fügt es ein', insert: 'Einfügen', ctxAria: 'Formatierung',
+      footer: v => `Quelle: Vanilla-Assets von Minecraft <span id="verFoot">${v}</span> (<code>assets/minecraft/textures</code> und <code>atlases/*.json</code> aus der Client-JAR). Sprites von Mods oder Resource Packs sind nicht enthalten. Rüstungsbesatz-Sprites (<code>armor_trims</code>) und die Farbvarianten der Item-Trims werden im Spiel aus Paletten erzeugt und fehlen deshalb. Animationen laufen mit 20 Ticks pro Sekunde nach den <code>.mcmeta</code>-Angaben. Quellcode und täglicher Update-Job: <a href="https://github.com/FlashSkyNews/mc-sprite-atlas" target="_blank" rel="noopener">FlashSkyNews/mc-sprite-atlas</a>.`,
+      notFound: ' (nicht gefunden)', head: n => `Spielerkopf: ${n} (Skin wird hier nicht geladen)`,
+      tooMany: n => `Die Serverliste zeigt nur 2 Zeilen, dein Text braucht ${n}. Der Rest wird abgeschnitten.`,
+      unknownTags: 'Unbekannte Tags werden als Text gezeigt: ',
+      motdInfo: 'Hover-, Klick- und Font-Tags werden verarbeitet, wirken in der Serverliste aber nicht. Legacy-Codes wie <code>&amp;a</code> gehen auch.',
+      maxLines: 'Die Serverliste zeigt maximal zwei Zeilen. Dafür ist kein Platz mehr.', noAlign: 'In dieser Zeile steht noch kein Text zum Ausrichten.',
+      cut: 'Ausgeschnitten.', copiedMM: 'Als MiniMessage kopiert.', copyBlocked: 'Kopieren ist hier blockiert. Nutze Strg+C.', pasteBlocked: 'Einfügen über das Menü ist hier blockiert. Nutze Strg+V.',
+      colorAria: k => 'Farbe ' + k,
+      ctx: { cut: 'Ausschneiden', copy: 'Als MiniMessage kopieren', paste: 'Einfügen', all: 'Alles auswählen', bold: 'Fett', italic: 'Kursiv', underlined: 'Unterstrichen', strike: 'Durchgestrichen',
+        obf: 'Obfuscated', gradient: 'Verlauf', rainbow: 'Regenbogen', noshadow: 'Schatten aus', clear: 'Formatierung entfernen', center: 'Zeile zentrieren', right: 'Zeile rechtsbündig',
+        chars: 'Sonderzeichen …', newline: 'Zeilenumbruch', ctrl: 'Strg' },
+      charGroups: {},
+      keys: { 'key.jump': 'Leertaste', 'key.sneak': 'Umschalt links', 'key.sprint': 'Strg links', 'key.attack': 'Linke Maustaste', 'key.use': 'Rechte Maustaste' },
+      needHost: 'Gib zuerst eine Server-Adresse ein.', connecting: h => `Verbinde mit ${h} …`, fetchFailed: 'Abruf fehlgeschlagen.',
+      noAnswer: (h, e) => `${h} antwortet nicht (${e}).`,
+      noApi: 'Kein Abruf-Server erreichbar. Das geht nur in der gehosteten Version der Seite. Nutze hier den manuellen Weg unten.',
+      badJson: 'Das ist kein gültiges JSON. Kopiere die ganze Antwort aus dem Status-Tab.', offline: h => `Server ${h} ist offline oder nicht erreichbar.`,
+      noMotd: 'In der Antwort steht keine MOTD. Ist es die Antwort von mcsrvstat.us oder mcstatus.io?',
+      applied: (name, ver, ms, icon, note) => `Übernommen: ${name}${ver ? ' · ' + ver : ''}${ms != null ? ' · ' + ms + ' ms' : ''}${icon ? '' : ' · ohne Icon'}${note ? ' · ' + note : ''}. Die MOTD steht jetzt im Editor.`,
+      iconOk: (w, h) => `Icon übernommen (${w}×${h}, auf 64×64 skaliert).`, iconBad: 'Das Bild konnte nicht gelesen werden. Nimm eine PNG-Datei.', iconReset: 'Standard-Icon wiederhergestellt.',
+      api: { missing_host: 'Gib eine Server-Adresse ein.', invalid: 'Ungültige Adresse.', private: 'Private oder lokale Adressen werden nicht abgefragt.' },
+      defaultMotd: '<gradient:#5ee7ff:#a07cff><bold>Mein Server</bold></gradient> <dark_gray>»</dark_gray> <white>Survival 26.2</white> <sprite:items:item/diamond>\n<sprite:gui:hud/heart/full> <yellow>Event am Samstag!</yellow> <gray>|</gray> <rainbow>Jetzt joinen</rainbow> <obf>!!</obf>',
+      defaultName: 'Mein Server',
+    },
+  };
+  let LANG = 'en';
+  try { const s = localStorage.getItem('lang'); if (s === 'de' || s === 'en') LANG = s; } catch (e) {}
+  // L('key', …args): Text in der aktuellen Sprache, Funktionen bekommen die Argumente
+  const L = (k, ...a) => { const v = STR[LANG][k] ?? STR.en[k] ?? k; return typeof v === 'function' ? v(...a) : v; };
+  const LABEL = a => STR[LANG]['atlas.' + a] || a;
+  function applyI18n() {
+    document.documentElement.lang = LANG;
+    document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = L(el.dataset.i18n); });
+    document.querySelectorAll('[data-i18n-title]').forEach(el => { el.title = L(el.dataset.i18nTitle); });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => { el.placeholder = L(el.dataset.i18nPh); });
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => { el.setAttribute('aria-label', L(el.dataset.i18nAria)); });
+    document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === LANG)));
+  }
   const PAGE = 240;
   const state = { atlas: 'all', anim: 'all', q: '', sub: 'all', shown: PAGE };
   try { const s = JSON.parse(localStorage.getItem('spriteFilter') || '{}'); Object.assign(state, s, { shown: PAGE }); } catch (e) {}
@@ -397,15 +536,15 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
       if (s.src) return;
       s.mm = s.a === 'blocks' ? `<sprite:${s.id}>` : `<sprite:${s.a}:${s.id}>`;
       const parts = s.id.split('/');
-      s.sub = parts.length > 1 ? parts.slice(0, parts.length > 2 ? 2 : 1).join('/') : '(oberste Ebene)';
+      s.sub = parts.length > 1 ? parts.slice(0, parts.length > 2 ? 2 : 1).join('/') : '';
       s.src = 'data:image/png;base64,' + s.img;
     });
     const counts = {};
     list.forEach(s => counts[s.a] = (counts[s.a] || 0) + 1);
     const order = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
     list.sort((x, y) => order.indexOf(x.a) - order.indexOf(y.a) || (x.id < y.id ? -1 : 1));
-    $('atlases').innerHTML = [`<button class="chip" data-v="all">Alle <span class="n">${list.length}</span></button>`]
-      .concat(order.map(a => `<button class="chip" data-v="${a}" title="Atlas minecraft:${a}">${LABELS[a] || a} <span class="n">${counts[a]}</span></button>`)).join('');
+    $('atlases').innerHTML = [`<button class="chip" data-v="all">${L('all')} <span class="n">${list.length}</span></button>`]
+      .concat(order.map(a => `<button class="chip" data-v="${a}" title="Atlas minecraft:${a}">${LABEL(a)} <span class="n">${counts[a]}</span></button>`)).join('');
     if (state.atlas !== 'all' && !counts[state.atlas]) state.atlas = 'all';
     ALL = list;
     SPRITES = new Map(list.map(s => [s.a + '|' + s.id, s]));
@@ -423,7 +562,7 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
     base.forEach(s => subs[s.sub] = (subs[s.sub] || 0) + 1);
     const keys = Object.keys(subs).sort();
     if (state.sub !== 'all' && !subs[state.sub]) state.sub = 'all';
-    $('sub').innerHTML = `<option value="all">Alle Unterordner (${keys.length})</option>` + keys.map(k => `<option value="${esc(k)}">${esc(k)} · ${subs[k]}</option>`).join('');
+    $('sub').innerHTML = `<option value="all">${L('subAll', keys.length)}</option>` + keys.map(k => `<option value="${esc(k)}">${esc(k || L('subTop'))} · ${subs[k]}</option>`).join('');
     $('sub').value = state.sub;
     const inSub = base.filter(s => state.sub === 'all' || s.sub === state.sub);
     const na = inSub.filter(s => s.an).length;
@@ -438,24 +577,24 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
     $('empty').hidden = list.length > 0;
     const vis = list.slice(0, state.shown);
     $('more').hidden = list.length <= state.shown;
-    $('more').textContent = `Mehr anzeigen (${list.length - state.shown} weitere)`;
+    $('more').textContent = L('more', list.length - state.shown);
     animated = [];
     grid.innerHTML = vis.map((s, i) => {
       let thumb;
       if (s.an) {
         const scale = 48 / Math.max(s.an.fw, s.an.fh);
         const w = s.an.fw * scale, h = s.an.fh * scale;
-        thumb = `<div class="anim" data-i="${i}" style="width:${w}px;height:${h}px;background-image:url(${s.src});background-size:${s.an.cols * w}px ${s.an.rows * h}px" role="img" aria-label="${esc(s.id)} (animiert)"></div>`;
+        thumb = `<div class="anim" data-i="${i}" style="width:${w}px;height:${h}px;background-image:url(${s.src});background-size:${s.an.cols * w}px ${s.an.rows * h}px" role="img" aria-label="${esc(s.id)} (${L('animAria')})"></div>`;
       } else {
         const scale = Math.min(48 / s.w, 48 / s.h, 3);
         thumb = `<img src="${s.src}" width="${Math.round(s.w * scale)}" height="${Math.round(s.h * scale)}" alt="${esc(s.id)}" loading="lazy" decoding="async">`;
       }
-      const size = s.an ? `${s.an.fw}×${s.an.fh} · ${s.an.seq.length} Frames` : `${s.w}×${s.h}`;
+      const size = s.an ? `${s.an.fw}×${s.an.fh} · ${s.an.seq.length} ${L('frames')}` : `${s.w}×${s.h}`;
       return `<article class="card"><div class="thumb">${thumb}</div>
         <div class="id">${esc(s.id)}</div>
-        <div class="meta"><span class="tag">${LABELS[s.a] || s.a}</span>${s.an ? '<span class="tag a">animiert</span>' : ''}<span class="tag s">${size}</span></div>
+        <div class="meta"><span class="tag">${LABEL(s.a)}</span>${s.an ? `<span class="tag a">${L('tagAnim')}</span>` : ''}<span class="tag s">${size}</span></div>
         <div></div>
-        <div class="mm"><code>${esc(s.mm)}</code><div class="btns"><button class="copy" data-mm="${esc(s.mm)}">Kopieren</button><button class="copy ins" data-mm="${esc(s.mm)}" title="In die MOTD einfügen">+ MOTD</button></div></div></article>`;
+        <div class="mm"><code>${esc(s.mm)}</code><div class="btns"><button class="copy" data-mm="${esc(s.mm)}">${L('copy')}</button><button class="copy ins" data-mm="${esc(s.mm)}" title="${L('insMotd')}">+ MOTD</button></div></div></article>`;
     }).join('');
     grid.querySelectorAll('.anim').forEach(el => {
       const s = vis[+el.dataset.i];
@@ -486,8 +625,8 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
   $('more').addEventListener('click', () => { state.shown += PAGE * 2; render(); });
   grid.addEventListener('click', e => {
     const b = e.target.closest('.copy'); if (!b || b.classList.contains('ins')) return;
-    const done = () => { b.textContent = 'Kopiert'; b.classList.add('ok'); setTimeout(() => { b.textContent = 'Kopieren'; b.classList.remove('ok'); }, 1200); };
-    const fallback = () => { const r = document.createRange(); r.selectNodeContents(b.parentElement.previousElementSibling); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); b.textContent = 'Markiert'; setTimeout(() => b.textContent = 'Kopieren', 1200); };
+    const done = () => { b.textContent = L('copied'); b.classList.add('ok'); setTimeout(() => { b.textContent = L('copy'); b.classList.remove('ok'); }, 1200); };
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents(b.parentElement.previousElementSibling); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); b.textContent = L('selected'); setTimeout(() => b.textContent = L('copy'), 1200); };
     try { navigator.clipboard.writeText(b.dataset.mm).then(done, fallback); } catch (err) { fallback(); }
   });
 
@@ -588,7 +727,7 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
     const s = SPRITES.get(atlas + '|' + id);
     const el = document.createElement('span'); el.className = 'sp';
     el.title = `${atlas}:${id}`;
-    if (!s) { el.classList.add('missing'); el.title += ' (nicht gefunden)'; return el; }
+    if (!s) { el.classList.add('missing'); el.title += L('notFound'); return el; }
     if (s.an) {
       const sc = 16 / Math.max(s.an.fw, s.an.fh), w = s.an.fw * sc, h = s.an.fh * sc;
       Object.assign(el.style, { width: w + 'px', height: h + 'px', backgroundImage: `url(${s.src})`, backgroundSize: `${s.an.cols * w}px ${s.an.rows * h}px` });
@@ -673,10 +812,10 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
   function makeObj(it, c) {
     let el;
     if (it.obj === 'sprite') el = makeSprite(it.args);
-    else if (it.obj === 'head') { el = document.createElement('span'); el.className = 'sp missing'; el.title = 'Spielerkopf: ' + (it.args[0] || '?') + ' (Skin wird hier nicht geladen)'; }
+    else if (it.obj === 'head') { el = document.createElement('span'); el.className = 'sp missing'; el.title = L('head', it.args[0] || '?'); }
     else {
       const a = it.args;
-      const label = it.obj === 'key' ? (KEYS[a[0]] || a[0] || '') : it.obj === 'lang' ? (a[0] || '') : it.obj === 'selector' ? (a[0] || '@p') : it.obj === 'score' ? '0' : '{nbt}';
+      const label = it.obj === 'key' ? (STR[LANG].keys[a[0]] || KEYS[a[0]] || a[0] || '') : it.obj === 'lang' ? (a[0] || '') : it.obj === 'selector' ? (a[0] || '@p') : it.obj === 'score' ? '0' : '{nbt}';
       el = document.createElement('span'); el.className = 'objtxt'; el.dataset.label = label; el.title = it.mm; styleSpan(el, it.st, c);
     }
     el.dataset.obj = '1'; el.contentEditable = 'false';
@@ -726,17 +865,16 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
   const scramble = root => root.querySelectorAll('.obf').forEach(el => { const t = el.dataset.t; if (t != null) el.textContent = [...t].map(ch => /\s/.test(ch) ? ch : OBF[Math.random() * OBF.length | 0]).join(''); });
 
   const mIn = $('motdIn'), mOut = $('mcMotd');
-  const DEFAULT_MOTD = '<gradient:#5ee7ff:#a07cff><bold>Mein Server</bold></gradient> <dark_gray>»</dark_gray> <white>Survival 26.2</white> <sprite:items:item/diamond>\n<sprite:gui:hud/heart/full> <yellow>Event am Samstag!</yellow> <gray>|</gray> <rainbow>Jetzt joinen</rainbow> <obf>!!</obf>';
   const pref = (() => { try { return JSON.parse(localStorage.getItem('motdDraft') || 'null'); } catch (e) { return null; } })() || {};
-  mIn.value = pref.motd ?? DEFAULT_MOTD;
-  $('mName').value = pref.name ?? 'Mein Server';
+  mIn.value = pref.motd ?? L('defaultMotd');
+  $('mName').value = pref.name ?? L('defaultName');
   $('mOn').value = pref.on ?? 42; $('mMax').value = pref.max ?? 100;
   const ping = SPRITES.get('gui|server_list/ping_5'); if (ping) $('mcPing').src = ping.src;
 
   let model = [];
   function renderMotd() {
     try { localStorage.setItem('motdDraft', JSON.stringify({ motd: mIn.value, name: $('mName').value, on: $('mOn').value, max: $('mMax').value })); } catch (e) {}
-    $('mcName').textContent = $('mName').value || 'Minecraft-Server';
+    $('mcName').textContent = $('mName').value || L('defaultServer');
     $('mcPlayers').textContent = `${$('mOn').value || 0}/${$('mMax').value || 0}`;
     const { root, unknown } = parseMM(fromLegacy(mIn.value.replace(/\r/g, '')));
     model = toModel(root, BASE_ST, []);
@@ -744,11 +882,11 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
     renderModel(mOut, model, '#808080', true);
     const lines = Math.round((mOut.scrollHeight) / 18);
     const msgs = [];
-    if (lines > 2 && document.activeElement !== mOut) msgs.push(`Die Serverliste zeigt nur 2 Zeilen, dein Text braucht ${lines}. Der Rest wird abgeschnitten.`);
-    if (unknown.size) msgs.push('Unbekannte Tags werden als Text gezeigt: ' + [...unknown].map(u => `<code>&lt;${esc(u)}&gt;</code>`).join(', '));
+    if (lines > 2 && document.activeElement !== mOut) msgs.push(L('tooMany', lines));
+    if (unknown.size) msgs.push(L('unknownTags') + [...unknown].map(u => `<code>&lt;${esc(u)}&gt;</code>`).join(', '));
     const st = $('motdStatus');
     st.classList.toggle('warn', msgs.length > 0);
-    st.innerHTML = msgs.length ? msgs.join(' ') : 'Hover-, Klick- und Font-Tags werden verarbeitet, wirken in der Serverliste aber nicht. Legacy-Codes wie <code>&amp;a</code> gehen auch.';
+    st.innerHTML = msgs.length ? msgs.join(' ') : L('motdInfo');
     tick();
   }
   let mt; [mIn, $('mName'), $('mOn'), $('mMax')].forEach(el => el.addEventListener('input', () => { clearTimeout(mt); mt = setTimeout(renderMotd, 60); }));
@@ -759,8 +897,8 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
   }, 50);
   $('motdCopy').addEventListener('click', () => {
     const b = $('motdCopy'), v = mIn.value.replace(/\n/g, '<newline>');
-    const done = t => { b.textContent = t; b.classList.add('ok'); setTimeout(() => { b.textContent = 'MiniMessage kopieren'; b.classList.remove('ok'); }, 1300); };
-    try { navigator.clipboard.writeText(v).then(() => done('Kopiert'), () => { mIn.select(); done('Markiert'); }); } catch (e) { mIn.select(); done('Markiert'); }
+    const done = t => { b.textContent = t; b.classList.add('ok'); setTimeout(() => { b.textContent = L('copyMM'); b.classList.remove('ok'); }, 1300); };
+    try { navigator.clipboard.writeText(v).then(() => done(L('copied')), () => { mIn.select(); done(L('selected')); }); } catch (e) { mIn.select(); done(L('selected')); }
   });
   grid.addEventListener('click', e => { const b = e.target.closest('.ins'); if (b) insert(b.dataset.mm); });
 
@@ -799,7 +937,7 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
 
   const sw = $('swatches');
   Object.entries(NAMED).filter(([k]) => !k.includes('grey')).forEach(([k, v]) => {
-    const b = document.createElement('button'); b.type = 'button'; b.className = 'sw'; b.style.background = v; b.title = `<${k}>`; b.dataset.wrap = k; b.setAttribute('aria-label', 'Farbe ' + k); sw.appendChild(b);
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'sw'; b.style.background = v; b.title = `<${k}>`; b.dataset.wrap = k; b.dataset.i18nAria = ''; b.setAttribute('aria-label', L('colorAria', k)); sw.appendChild(b);
   });
   const pr = $('pride'); Object.keys(PRIDE).forEach(k => { const o = document.createElement('option'); o.value = k; o.textContent = k; pr.appendChild(o); });
   pr.addEventListener('change', () => { if (pr.value) wrap(pr.value === 'pride' ? 'pride' : 'pride:' + pr.value); pr.value = ''; });
@@ -875,8 +1013,68 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
       ['&aGrün &lfett &r&#ff8800orange', 'Alte &- und §-Codes werden für die Vorschau umgewandelt. Für MiniMessage-Plugins besser Tags nutzen.'],
     ]],
   ];
+  const HELP_I18N = {
+    en: [
+      ['Colors', [
+        ['<red>Text', 'Named color. 16 names: black, dark_blue, dark_green, dark_aqua, dark_red, dark_purple, gold, gray, dark_gray, blue, green, aqua, red, light_purple, yellow, white.'],
+        ['<#ff8800>Text', 'Any hex color.'],
+        ['<color:#55ffff>Text</color>', 'Long form, also <c:…> and <colour:…>.'],
+      ]],
+      ['Formatting', [
+        ['<bold>Bold</bold> <b>short</b>', 'Bold. In-game every character gets 1 pixel wider.'],
+        ['<italic>Italic</italic> <i>short</i>', 'Italic, also <em>.'],
+        ['<underlined>Underlined</underlined>', 'Underlined, short <u>.'],
+        ['<strikethrough>Struck</strikethrough>', 'Strikethrough, short <st>.'],
+        ['<obfuscated>Secret</obfuscated>', 'Changing random characters, short <obf>.'],
+        ['<b>Bold <!b>not bold', 'A ! in front turns a style off. <bold:false> works too.'],
+      ]],
+      ['Gradients', [
+        ['<gradient:red:blue>From red to blue</gradient>', 'Gradient across any number of colors.'],
+        ['<gradient:#5ee7ff:#a07cff:#ff6fb5>Three colors</gradient>', 'More colors, more stops.'],
+        ['<gradient:red:blue:0.5>Shifted</gradient>', 'The last number shifts the phase (-1 to 1).'],
+        ['<rainbow>Rainbow text</rainbow>', 'Rainbow. <rainbow:!> runs backwards, <rainbow:3> shifts the phase.'],
+        ['<transition:red:blue:0.3>One mixed color</transition>', 'A single color at a point between the colors.'],
+        ['<pride:trans>Pride flag</pride>', 'Gradient in the colors of a pride flag (pride, trans, bi, pan, lesbian, nb, ace …).'],
+      ]],
+      ['Shadow', [
+        ['<shadow:#ff0000>Red shadow</shadow>', 'Custom shadow color, optionally with opacity: <shadow:#ff0000:0.5>.'],
+        ['<!shadow>No shadow', 'Turns the shadow off.'],
+      ]],
+      ['Structure', [
+        ['Line 1<newline>Line 2', 'Line break, short <br>. The server list shows 2 lines max.'],
+        ['<red><b>Red bold<reset> normal', '<reset> closes all open tags.'],
+        ['<red>red</red> gray', 'Closing tags end only that style.'],
+        ['\\<red> stays text', 'A backslash in front shows the tag as text.'],
+      ]],
+      ['Objects', [
+        ['<sprite:items:item/diamond> Sprite', 'Sprite from an atlas: <sprite:atlas:id>. Without an atlas, blocks is used. Use “+ MOTD” on the cards.'],
+        ['<sprite:gui:hud/heart/full> Heart', 'GUI sprites live in the gui atlas.'],
+        ['<head:Notch> Head', "Player head. The preview shows a placeholder because it can't load skins."],
+      ]],
+      ['Interaction (no effect in the server list)', [
+        ["<hover:show_text:'<red>Hello'>Hover me</hover>", 'Tooltip on hover, in chat.'],
+        ["<click:open_url:'https://papermc.io'>Link</click>", 'Click action: open_url, run_command, suggest_command, copy_to_clipboard, change_page.'],
+        ['<insert:Hello>Shift-click</insert>', 'Inserts text into chat on shift-click.'],
+        ['<font:minecraft:alt>Font</font>', 'Another font from a resource pack.'],
+      ]],
+      ['Dynamic content', [
+        ['<key:key.jump>', "The player's key binding."],
+        ['<lang:block.minecraft.diamond_block>', "Translation key in the player's language, also <tr:…>."],
+        ['<selector:@p>', 'Entity selector.'],
+        ['<score:Steve:kills>', 'Scoreboard value.'],
+      ]],
+      ['Legacy codes', [
+        ['&aGreen &lbold &r&#ff8800orange', 'Old & and § codes are converted for the preview. For MiniMessage plugins, prefer tags.'],
+      ]],
+    ],
+    de: HELP,
+  };
   const hb = $('helpBody');
-  hb.innerHTML = HELP.map(([h, rows]) => `<section><h3>${esc(h)}</h3>${rows.map(([ex, d]) => `<div class="hrow"><code class="ex" tabindex="0" role="button" data-ex="${esc(ex)}" title="Einfügen">${esc(ex)}</code><span class="d">${esc(d)}</span><div class="mc-mini" data-prev="${esc(ex)}"></div></div>`).join('')}</section>`).join('');
+  function drawHelp() {
+    const help = HELP_I18N[LANG] || HELP_I18N.en;
+    hb.innerHTML = help.map(([h, rows]) => `<section><h3>${esc(h)}</h3>${rows.map(([ex, d]) => `<div class="hrow"><code class="ex" tabindex="0" role="button" data-ex="${esc(ex)}" title="${L('insert')}">${esc(ex)}</code><span class="d">${esc(d)}</span><div class="mc-mini" data-prev="${esc(ex)}"></div></div>`).join('')}</section>`).join('');
+  }
+  drawHelp();
   let helpDone = false;
   $('help').addEventListener('toggle', () => {
     if (helpDone || !$('help').open) return; helpDone = true;
@@ -941,7 +1139,7 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
     if (!wasOver && lineCount() > MAX_LINES) {
       mIn.value = before; undoStack.pop(); highlight(); renderMotd();
       mOut.focus({ preventScroll: true }); setSel(Math.min(prev[0], model.length), Math.min(prev[1], model.length));
-      flash('Die Serverliste zeigt maximal zwei Zeilen. Dafür ist kein Platz mehr.', true);
+      flash(L('maxLines'), true);
       return false;
     }
     mOut.focus({ preventScroll: true });
@@ -1078,7 +1276,7 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
       next.push(...seg);
       if (k < bounds.length - 1) next.push(model[le]);
     });
-    if (!changed) { flash('In dieser Zeile steht noch kein Text zum Ausrichten.', true); return; }
+    if (!changed) { flash(L('noAlign'), true); return; }
     snapshot(); pending = null;
     commit(next, caret ?? next.length);
   }
@@ -1088,28 +1286,32 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
   /* ---------- Rechtsklick-Menü in der Vorschau ---------- */
   const ctx = $('ctx');
   const CTX_COLORS = Object.entries(NAMED).filter(([k]) => !k.includes('grey'));
-  ctx.innerHTML = `
-    <button type="button" role="menuitem" data-act="cut">Ausschneiden<kbd>Strg+X</kbd></button>
-    <button type="button" role="menuitem" data-act="copy">Als MiniMessage kopieren<kbd>Strg+C</kbd></button>
-    <button type="button" role="menuitem" data-act="paste">Einfügen<kbd>Strg+V</kbd></button>
-    <button type="button" role="menuitem" data-act="all">Alles auswählen<kbd>Strg+A</kbd></button>
+  function buildCtx() {
+    const c = STR[LANG].ctx, k = c.ctrl;
+    ctx.innerHTML = `
+    <button type="button" role="menuitem" data-act="cut">${c.cut}<kbd>${k}+X</kbd></button>
+    <button type="button" role="menuitem" data-act="copy">${c.copy}<kbd>${k}+C</kbd></button>
+    <button type="button" role="menuitem" data-act="paste">${c.paste}<kbd>${k}+V</kbd></button>
+    <button type="button" role="menuitem" data-act="all">${c.all}<kbd>${k}+A</kbd></button>
     <hr>
-    <button type="button" role="menuitemcheckbox" data-act="bold"><b>Fett</b><kbd>Strg+B</kbd></button>
-    <button type="button" role="menuitemcheckbox" data-act="italic"><i>Kursiv</i><kbd>Strg+I</kbd></button>
-    <button type="button" role="menuitemcheckbox" data-act="underlined"><u>Unterstrichen</u><kbd>Strg+U</kbd></button>
-    <button type="button" role="menuitemcheckbox" data-act="strikethrough"><s>Durchgestrichen</s></button>
-    <button type="button" role="menuitemcheckbox" data-act="obfuscated">Obfuscated</button>
+    <button type="button" role="menuitemcheckbox" data-act="bold"><b>${c.bold}</b><kbd>${k}+B</kbd></button>
+    <button type="button" role="menuitemcheckbox" data-act="italic"><i>${c.italic}</i><kbd>${k}+I</kbd></button>
+    <button type="button" role="menuitemcheckbox" data-act="underlined"><u>${c.underlined}</u><kbd>${k}+U</kbd></button>
+    <button type="button" role="menuitemcheckbox" data-act="strikethrough"><s>${c.strike}</s></button>
+    <button type="button" role="menuitemcheckbox" data-act="obfuscated">${c.obf}</button>
     <hr>
-    <div class="ctx-sw" role="group" aria-label="Farbe">${CTX_COLORS.map(([k, v]) => `<button type="button" role="menuitem" data-act="color" data-v="${k}" style="background:${v}" title="&lt;${k}&gt;" aria-label="Farbe ${k}"></button>`).join('')}</div>
-    <button type="button" role="menuitem" data-act="gradient">Verlauf <span class="ctx-grad"></span></button>
-    <button type="button" role="menuitem" data-act="rainbow">Regenbogen</button>
-    <button type="button" role="menuitem" data-act="noshadow">Schatten aus</button>
-    <button type="button" role="menuitem" data-act="clear">Formatierung entfernen</button>
+    <div class="ctx-sw" role="group" aria-label="${L('lColor')}">${CTX_COLORS.map(([n, v]) => `<button type="button" role="menuitem" data-act="color" data-v="${n}" style="background:${v}" title="&lt;${n}&gt;" aria-label="${L('colorAria', n)}"></button>`).join('')}</div>
+    <button type="button" role="menuitem" data-act="gradient">${c.gradient} <span class="ctx-grad"></span></button>
+    <button type="button" role="menuitem" data-act="rainbow">${c.rainbow}</button>
+    <button type="button" role="menuitem" data-act="noshadow">${c.noshadow}</button>
+    <button type="button" role="menuitem" data-act="clear">${c.clear}</button>
     <hr>
-    <button type="button" role="menuitem" data-act="center">Zeile zentrieren</button>
-    <button type="button" role="menuitem" data-act="right">Zeile rechtsbündig</button>
-    <button type="button" role="menuitem" data-act="chars">Sonderzeichen …</button>
-    <button type="button" role="menuitem" data-act="newline">Zeilenumbruch<kbd>Enter</kbd></button>`;
+    <button type="button" role="menuitem" data-act="center">${c.center}</button>
+    <button type="button" role="menuitem" data-act="right">${c.right}</button>
+    <button type="button" role="menuitem" data-act="chars">${c.chars}</button>
+    <button type="button" role="menuitem" data-act="newline">${c.newline}<kbd>Enter</kbd></button>`;
+  }
+  buildCtx();
   const ctxItems = () => [...ctx.querySelectorAll('button')];
   function openCtx(x, y) {
     const [a, b] = curSel(), range = model.slice(a, b).filter(it => it.ch !== '\n'), st = styleAt(a);
@@ -1164,14 +1366,14 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
     switch (act) {
       case 'copy': case 'cut': {
         const text = serialize(model.slice(a, b));
-        try { await navigator.clipboard.writeText(text); flash(act === 'cut' ? 'Ausgeschnitten.' : 'Als MiniMessage kopiert.'); }
-        catch (err) { flash('Kopieren ist hier blockiert. Nutze Strg+C.', true); return; }
+        try { await navigator.clipboard.writeText(text); flash(act === 'cut' ? L('cut') : L('copiedMM')); }
+        catch (err) { flash(L('copyBlocked'), true); return; }
         if (act === 'cut') replaceItems(a, b, []);
         break;
       }
       case 'paste': {
         try { const t = await navigator.clipboard.readText(); insertMarkup(a, b, t); }
-        catch (err) { flash('Einfügen über das Menü ist hier blockiert. Nutze Strg+V.', true); }
+        catch (err) { flash(L('pasteBlocked'), true); }
         break;
       }
       case 'all': setSel(0, model.length); break;
@@ -1192,7 +1394,8 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
   const panel = $('panel'), layout = $('layout'), ptog = $('panelToggle');
   function setCollapsed(c) {
     panel.classList.toggle('collapsed', c); layout.classList.toggle('collapsed', c);
-    ptog.textContent = c ? (matchMedia('(min-width: 1240px)').matches ? '«' : 'Öffnen') : (matchMedia('(min-width: 1240px)').matches ? 'Einklappen »' : 'Einklappen');
+    const wide = matchMedia('(min-width: 1240px)').matches;
+    ptog.textContent = c ? L(wide ? 'expandWide' : 'expand') : L(wide ? 'collapseWide' : 'collapse');
     ptog.setAttribute('aria-expanded', String(!c));
     try { localStorage.setItem('motdPanel', c ? '1' : '0'); } catch (e) {}
   }
@@ -1210,7 +1413,7 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
   const cp = $('charPick'), tabs = cp.querySelector('.tabs'), cg = $('cgrid'), cname = $('cname');
   let ctab = Object.keys(CHARS)[0];
   function drawChars() {
-    tabs.innerHTML = Object.keys(CHARS).map(k => `<button type="button" data-k="${esc(k)}" aria-pressed="${k === ctab}">${esc(k)} <span class="n">${CHARS[k].length}</span></button>`).join('');
+    tabs.innerHTML = Object.keys(CHARS).map(k => `<button type="button" data-k="${esc(k)}" aria-pressed="${k === ctab}">${esc(STR[LANG].charGroups[k] || k)} <span class="n">${CHARS[k].length}</span></button>`).join('');
     cg.innerHTML = CHARS[ctab].map(([c, n]) => `<button type="button" data-c="${esc(c)}" title="${esc(n)} U+${c.codePointAt(0).toString(16).toUpperCase().padStart(4, '0')}" aria-label="${esc(n || c)}">${esc(c)}</button>`).join('');
   }
   tabs.addEventListener('click', e => { const b = e.target.closest('button'); if (b) { ctab = b.dataset.k; drawChars(); } });
@@ -1264,31 +1467,31 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
     if (max != null) $('mMax').value = max;
     if (typeof iconSrc === 'string' && /^data:image\/png;base64,[A-Za-z0-9+/=\s]+$/.test(iconSrc)) setIcon(iconSrc.replace(/\s/g, ''));
     PING(latency);
-    say(`Übernommen: ${name}${version ? ' · ' + version : ''}${latency != null ? ' · ' + latency + ' ms' : ''}${iconSrc ? '' : ' · ohne Icon'}${note ? ' · ' + note : ''}. Die MOTD steht jetzt im Editor.`);
+    say(L('applied', name, version, latency, iconSrc, note));
     highlight(); renderMotd();
   }
   $('fForm').addEventListener('submit', async e => {
     e.preventDefault();
-    const h = fHost.value.trim(); if (!h) { say('Gib zuerst eine Server-Adresse ein.', true); fHost.focus(); return; }
-    const btn = $('fGo'); btn.disabled = true; btn.textContent = 'Frage ab …'; say('Verbinde mit ' + h + ' …');
+    const h = fHost.value.trim(); if (!h) { say(L('needHost'), true); fHost.focus(); return; }
+    const btn = $('fGo'); btn.disabled = true; btn.textContent = L('fetching'); say(L('connecting', h));
     try {
       const r = await fetch('api/status?host=' + encodeURIComponent(h));
       const d = await r.json();
-      if (!d.ok) { say(d.error || 'Abruf fehlgeschlagen.', true); return; }
-      if (!d.online) { say(`${d.host}:${d.port} antwortet nicht (${d.error}).`, true); PING(null); return; }
+      if (!d.ok) { say((d.code && STR[LANG].api[d.code]) || d.error || L('fetchFailed'), true); return; }
+      if (!d.online) { say(L('noAnswer', `${d.host}:${d.port}`, d.error), true); PING(null); return; }
       applyStatus({ name: d.host, motd: compToMM(d.description), online: d.players?.online, max: d.players?.max, iconSrc: d.favicon, latency: d.latency, version: d.version?.name, note: d.srv ? 'SRV → ' + d.srv : '' });
     } catch (err) {
-      say('Kein Abruf-Server erreichbar. Das geht nur in der Cloudflare-Version der Seite. Nutze hier den manuellen Weg unten.', true);
+      say(L('noApi'), true);
       $('fManual').open = true;
-    } finally { btn.disabled = false; btn.textContent = 'Abrufen'; }
+    } finally { btn.disabled = false; btn.textContent = L('fetchBtn'); }
   });
   function importStatus(txt) {
-    let d; try { d = JSON.parse(txt.trim()); } catch (e) { say('Das ist kein gültiges JSON. Kopiere die ganze Antwort aus dem Status-Tab.', true); return; }
-    if (d.online === false) { say(`Server ${d.hostname || d.host || d.ip || ''} ist offline oder nicht erreichbar.`, true); return; }
+    let d; try { d = JSON.parse(txt.trim()); } catch (e) { say(L('badJson'), true); return; }
+    if (d.online === false) { say(L('offline', d.hostname || d.host || d.ip || ''), true); return; }
     let motd;
     if (d.motd && (d.motd.raw ?? d.motd.clean) != null) { let raw = d.motd.raw ?? d.motd.clean; if (Array.isArray(raw)) raw = raw.join('\n'); motd = legacyToMM(mmText(raw)); }
     else if (d.description != null) motd = compToMM(d.description);
-    if (motd == null) { say('In der Antwort steht keine MOTD. Ist es die Antwort von mcsrvstat.us oder mcstatus.io?', true); return; }
+    if (motd == null) { say(L('noMotd'), true); return; }
     const ver = d.version && (typeof d.version === 'string' ? d.version : d.version.name_clean || d.version.name || '');
     applyStatus({ name: d.hostname || d.host || fHost.value.trim() || 'Server', motd, online: d.players?.online, max: d.players?.max, iconSrc: d.icon || d.favicon, latency: null, version: ver });
   }
@@ -1299,13 +1502,13 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
     const r = new FileReader();
     r.onload = () => {
       const img = new Image();
-      img.onload = () => { const c = document.createElement('canvas'); c.width = c.height = 64; const x = c.getContext('2d'); x.imageSmoothingEnabled = false; x.drawImage(img, 0, 0, 64, 64); setIcon(c.toDataURL('image/png')); say(`Icon übernommen (${img.width}×${img.height}, auf 64×64 skaliert).`); };
-      img.onerror = () => say('Das Bild konnte nicht gelesen werden. Nimm eine PNG-Datei.', true);
+      img.onload = () => { const c = document.createElement('canvas'); c.width = c.height = 64; const x = c.getContext('2d'); x.imageSmoothingEnabled = false; x.drawImage(img, 0, 0, 64, 64); setIcon(c.toDataURL('image/png')); say(L('iconOk', img.width, img.height)); };
+      img.onerror = () => say(L('iconBad'), true);
       img.src = r.result;
     };
     r.readAsDataURL(f); e.target.value = '';
   });
-  $('fResetIcon').addEventListener('click', () => { setIcon(DEFAULT_ICON); say('Standard-Icon wiederhergestellt.'); });
+  $('fResetIcon').addEventListener('click', () => { setIcon(DEFAULT_ICON); say(L('iconReset')); });
 
   /* ---------- Versionsauswahl (Liste kommt aus data/versions.json, die das Update-Skript pflegt) ---------- */
   const EMBEDDED = null;   // Version, deren Daten in dieser Datei stecken, oder null
@@ -1318,18 +1521,33 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
     const file = fileOf(v); if (!file) return;
     let list = dataCache.get(file);
     if (!list) {
-      verSel.disabled = true; $('count').textContent = 'Lade ' + v + ' …';
+      verSel.disabled = true; $('count').textContent = L('loading', v);
       try { const r = await fetch('data/' + file + '.json'); if (!r.ok) throw new Error(r.status); list = await r.json(); dataCache.set(file, list); }
-      catch (e) { verSel.disabled = false; if (curVer) verSel.value = curVer; $('count').textContent = `Version ${v} konnte nicht geladen werden.`; return; }
+      catch (e) { verSel.disabled = false; if (curVer) verSel.value = curVer; $('count').textContent = L('loadFail', v); return; }
       verSel.disabled = false;
     }
     curVer = v; verSel.value = v;
     prepare(list);
-    $('verFoot').textContent = v;
+    $('foot').innerHTML = L('footer', v);
     try { localStorage.setItem('spriteVersion', v); } catch (e) {}
     state.shown = PAGE; render(); renderMotd();
   }
   verSel.addEventListener('change', () => { setVersion(verSel.value); try { history.replaceState(null, '', '#v' + verSel.value); } catch (e) {} });
+
+  /* ---------- Sprache umschalten ---------- */
+  function setLang(l) {
+    LANG = l;
+    try { localStorage.setItem('lang', l); } catch (e) {}
+    applyI18n();
+    $('foot').innerHTML = L('footer', curVer || EMBEDDED || '');
+    prepare(ALL); render(); renderMotd();
+    drawHelp(); helpDone = false; if ($('help').open) $('help').dispatchEvent(new Event('toggle'));
+    buildCtx(); if (!$('charPick').hidden) drawChars();
+    setCollapsed(panel.classList.contains('collapsed'));
+  }
+  document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+  applyI18n();
+  $('foot').innerHTML = L('footer', EMBEDDED || '');
 
   (async () => {
     if (EMBEDDED && ALL.length) dataCache.set(fileOf(EMBEDDED) || EMBEDDED, ALL);

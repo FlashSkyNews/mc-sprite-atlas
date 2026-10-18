@@ -39,14 +39,14 @@ class Reader {
   async need(n) {
     while (this.buf.length < n) {
       const { value, done } = await this.r.read();
-      if (done) throw new Error('Verbindung vom Server geschlossen');
+      if (done) throw new Error('connection closed by server');
       const b = new Uint8Array(this.buf.length + value.length); b.set(this.buf); b.set(value, this.buf.length); this.buf = b;
     }
   }
   async byte() { await this.need(1); const v = this.buf[0]; this.buf = this.buf.subarray(1); return v; }
   async varInt() {
     let n = 0, shift = 0, b;
-    do { b = await this.byte(); n |= (b & 0x7f) << shift; shift += 7; if (shift > 35) throw new Error('Ungültige VarInt'); } while (b & 0x80);
+    do { b = await this.byte(); n |= (b & 0x7f) << shift; shift += 7; if (shift > 35) throw new Error('invalid VarInt'); } while (b & 0x80);
     return n;
   }
   async bytes(n) { await this.need(n); const v = this.buf.slice(0, n); this.buf = this.buf.subarray(n); return v; }
@@ -72,7 +72,7 @@ async function ping(host, port, handshakeHost) {
     await writer.write(packet(0x00, hs));
     await writer.write(packet(0x00, []));
     await reader.varInt();                       // Paketlänge
-    if (await reader.varInt() !== 0x00) throw new Error('Unerwartete Antwort');
+    if (await reader.varInt() !== 0x00) throw new Error('unexpected response');
     const len = await reader.varInt();
     const status = JSON.parse(new TextDecoder().decode(await reader.bytes(len)));
     let latency = null;
@@ -92,18 +92,18 @@ async function ping(host, port, handshakeHost) {
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
   let input = (url.searchParams.get('host') || '').trim().toLowerCase();
-  if (!input) return json({ ok: false, error: 'Parameter host fehlt, z. B. /api/status?host=hypixel.net' }, 400);
+  if (!input) return json({ ok: false, code: 'missing_host', error: 'Missing host parameter, e.g. /api/status?host=hypixel.net' }, 400);
   let host = input, port = null;
   const m = input.match(/^(.+):(\d{1,5})$/);
   if (m) { host = m[1]; port = +m[2]; }
-  if (!HOST_RE.test(host) || (port != null && (port < 1 || port > 65535))) return json({ ok: false, error: 'Ungültige Adresse.' }, 400);
-  if (isPrivateHost(host) && env.ALLOW_PRIVATE !== '1') return json({ ok: false, error: 'Private oder lokale Adressen werden nicht abgefragt.' }, 400);
+  if (!HOST_RE.test(host) || (port != null && (port < 1 || port > 65535))) return json({ ok: false, code: 'invalid', error: 'Invalid address.' }, 400);
+  if (isPrivateHost(host) && env.ALLOW_PRIVATE !== '1') return json({ ok: false, code: 'private', error: 'Private or local addresses are not queried.' }, 400);
 
   let target = { host, port: port ?? 25565 }, srv = null;
   if (port == null) { srv = await resolveSrv(host); if (srv) target = srv; }
 
   try {
-    const timeout = new Promise((_, rej) => setTimeout(() => rej(new Error('Zeitüberschreitung nach ' + TIMEOUT_MS / 1000 + ' s')), TIMEOUT_MS));
+    const timeout = new Promise((_, rej) => setTimeout(() => rej(new Error('timed out after ' + TIMEOUT_MS / 1000 + ' s')), TIMEOUT_MS));
     const { status, latency } = await Promise.race([ping(target.host, target.port, host), timeout]);
     return json({
       ok: true, online: true, host, port: target.port, srv: srv ? `${srv.host}:${srv.port}` : null, latency,

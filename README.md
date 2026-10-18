@@ -1,8 +1,8 @@
-# Sprite-Atlas
+# Sprite Atlas
 
 Repo: https://github.com/FlashSkyNews/mc-sprite-atlas
 
-Alle Vanilla-Sprites von Minecraft ab 1.21.9 mit MiniMessage-Tags, dazu ein MOTD-Editor mit echtem Server-Abruf.
+Alle Vanilla-Sprites von Minecraft ab 1.21.9 mit MiniMessage-Tags, dazu ein MOTD-Editor mit echtem Server-Abruf. Die Seite ist standardmäßig englisch, Deutsch lässt sich oben rechts umschalten (die Wahl wird gespeichert).
 
 - `public/index.html`: die Seite (Schrift und Code eingebettet, Sprites kommen aus `public/data/`)
 - `public/data/versions.json` + `public/data/<version>.json`: Sprites pro Version, gepflegt vom Update-Skript
