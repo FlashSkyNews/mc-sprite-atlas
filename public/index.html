@@ -1,5 +1,29 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
-<title>Sprite-Atlas 26.2</title>
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Alle Vanilla-Sprites von Minecraft ab 1.21.9 mit fertigen MiniMessage-Tags für Paper (&lt;sprite:…&gt;), filterbar nach Atlas und Animation. Dazu ein MOTD-Editor mit Live-Vorschau in Originalschrift, Server-Abruf, Zentrieren und Sonderzeichen.">
+<link rel="canonical" href="https://motdpreviewer.kay0.io/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#f0b84a">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sprite-Atlas">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://motdpreviewer.kay0.io/">
+<meta property="og:title" content="Sprite-Atlas: Minecraft-Sprites als MiniMessage-Tags">
+<meta property="og:description" content="Alle Vanilla-Sprites ab 1.21.9 als MiniMessage-Tags für Paper, plus MOTD-Editor mit Live-Vorschau in Originalschrift und Server-Abruf.">
+<meta property="og:image" content="https://motdpreviewer.kay0.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sprite-Atlas: Minecraft-Sprites mit MiniMessage-Tag und MOTD-Vorschau einer Serverliste">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sprite-Atlas: Minecraft-Sprites als MiniMessage-Tags">
+<meta name="twitter:description" content="Alle Vanilla-Sprites ab 1.21.9 als MiniMessage-Tags für Paper, plus MOTD-Editor mit Live-Vorschau in Originalschrift und Server-Abruf.">
+<meta name="twitter:image" content="https://motdpreviewer.kay0.io/og.png">
+<link rel="preload" href="/data/versions.json" as="fetch" crossorigin>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Sprite-Atlas", "url": "https://motdpreviewer.kay0.io/", "description": "Alle Vanilla-Sprites ab 1.21.9 als MiniMessage-Tags für Paper, plus MOTD-Editor mit Live-Vorschau in Originalschrift und Server-Abruf.", "applicationCategory": "DeveloperApplication", "operatingSystem": "Web", "inLanguage": "de", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "image": "https://motdpreviewer.kay0.io/og.png", "codeRepository": "https://github.com/FlashSkyNews/mc-sprite-atlas", "keywords": "Minecraft, MiniMessage, Paper, Sprite, MOTD, Adventure, Texturen, Serverliste"}</script>
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>Sprite-Atlas: Minecraft-Sprites als MiniMessage-Tags &amp; MOTD-Editor</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +64,12 @@
 body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 14px; line-height: 1.45; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
 .wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); max-width: 1500px; margin: 0 auto; }
-header.top { padding-block: 22px 16px; display: grid; }
+header.top { padding-block: 22px 16px; display: grid; position: relative; }
+.gh { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: 26px; display: inline-flex; align-items: center; gap: 7px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--fg); text-decoration: none; font-size: 13px; font-weight: 500; }
+.gh:hover { border-color: var(--accent); }
+.gh:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 640px) { .gh span { display: none; } .gh { padding: 7px; } }
+.ver-wrap select { margin-right: 0; }
 header.top { grid-template-columns: minmax(0, 1fr); align-items: start; gap: 22px 40px; }
 .intro { display: grid; gap: 10px; min-width: 0; }
 @media (min-width: 1180px) { header.top { grid-template-columns: minmax(0, 1fr) minmax(0, 660px); } }
@@ -170,6 +199,7 @@ main { padding-block: 18px 40px; }
 .copy.ok { background: var(--accent-soft); border-color: var(--accent); }
 .more { display: flex; justify-content: center; padding-top: 18px; }
 .empty { color: var(--muted); padding: 40px 0; text-align: center; }
+footer a { color: var(--accent); }
 footer { color: var(--muted); font-size: 12.5px; padding-block: 0 32px; max-width: 80ch; }
 @media (prefers-reduced-motion: reduce) { .thumb .anim { animation: none; } }
 /* Seitenpanel: rechts neben den Sprites, bleibt beim Scrollen stehen; auf schmalen Bildschirmen unten angedockt */
@@ -227,6 +257,7 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
 </style>
 
 <header class="top wrap">
+ <a class="gh" href="https://github.com/FlashSkyNews/mc-sprite-atlas" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>Quellcode auf GitHub</span></a>
  <div class="intro">
   <h1>Sprite-Atlas <span class="ver-wrap"><select id="ver" class="ver" aria-label="Minecraft-Version"></select></span></h1>
  </div>
@@ -251,6 +282,7 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
   </div>
 </div>
 
+<noscript><p class="wrap">Der Sprite-Atlas braucht JavaScript. Er listet alle Vanilla-Sprites von Minecraft ab 1.21.9 mit MiniMessage-Tags wie &lt;sprite:items:item/diamond&gt; und enthält einen MOTD-Editor mit Vorschau der Serverliste.</p></noscript>
 <main class="wrap layout" id="layout">
   <div class="list">
   <div class="grid" id="grid"></div>
@@ -343,6 +375,7 @@ header.top { grid-template-columns: minmax(0, 1fr) !important; }
 
 <footer class="wrap">
   Quelle: Vanilla-Assets von Minecraft <span id="verFoot">26.2</span> (<code>assets/minecraft/textures</code> und <code>atlases/*.json</code> aus der Client-JAR). Sprites von Mods oder Resource Packs sind nicht enthalten. Rüstungsbesatz-Sprites (<code>armor_trims</code>) und die Farbvarianten der Item-Trims werden im Spiel aus Paletten erzeugt und fehlen deshalb. Animationen laufen mit 20 Ticks pro Sekunde nach den <code>.mcmeta</code>-Angaben.
+ Quellcode und täglicher Update-Job: <a href="https://github.com/FlashSkyNews/mc-sprite-atlas" target="_blank" rel="noopener">FlashSkyNews/mc-sprite-atlas</a>.
 </footer>
 
 <div class="ctx" id="ctx" role="menu" aria-label="Formatierung" hidden></div>

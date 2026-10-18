@@ -1,0 +1,9 @@
+/data/*.json
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/data/versions.json
+  Cache-Control: public, max-age=600
+/og.png
+  Cache-Control: public, max-age=86400
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

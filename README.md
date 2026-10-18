@@ -1,5 +1,7 @@
 # Sprite-Atlas
 
+Repo: https://github.com/FlashSkyNews/mc-sprite-atlas
+
 Alle Vanilla-Sprites von Minecraft ab 1.21.9 mit MiniMessage-Tags, dazu ein MOTD-Editor mit echtem Server-Abruf.
 
 - `public/index.html`: die Seite (Schrift und Code eingebettet, Sprites kommen aus `public/data/`)
@@ -7,7 +9,10 @@ Alle Vanilla-Sprites von Minecraft ab 1.21.9 mit MiniMessage-Tags, dazu ein MOTD
 - `functions/api/status.js`: Pages Function, die einen Java-Server per Server List Ping abfragt (TCP über `cloudflare:sockets`, SRV über DNS-over-HTTPS)
 - `scripts/update-sprites.mjs`: liest Mojangs Versionsmanifest, lädt neue Client-JARs, prüft die SHA-1 und erzeugt die Sprite-Daten aus den Atlas-Definitionen
 - `setup/update-sprites.yml`: GitHub-Actions-Job, der das Update täglich ausführt und neue Versionen committet (gehört nach `.github/workflows/`, siehe Einrichten)
+- `public/og.png`, `favicon.png`, `robots.txt`, `sitemap.xml`, `_headers`: Vorschaubild für Discord & Co., Icons, SEO und Cache-Regeln
 - `test/fake-mc.mjs`: Fake-Minecraft-Server zum lokalen Testen
+
+Live: https://motdpreviewer.kay0.io/ — Meta-Tags, `robots.txt`, `sitemap.xml` und das Vorschaubild verweisen auf diese Domain.
 
 ## Einrichten
 
