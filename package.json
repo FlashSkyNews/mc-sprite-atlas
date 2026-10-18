@@ -1,0 +1,18 @@
+{
+  "name": "mc-sprite-atlas",
+  "version": "1.0.0",
+  "description": "Sprite-Atlas 26.2 mit MOTD-Editor und Server-Abruf",
+  "scripts": {
+    "dev": "wrangler pages dev public --binding ALLOW_PRIVATE=1",
+    "deploy": "wrangler pages deploy public --project-name mc-sprite-atlas",
+    "fake-server": "node test/fake-mc.mjs",
+    "update": "node scripts/update-sprites.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.151.1"
+  },
+  "private": true,
+  "dependencies": {
+    "fflate": "^0.8.2"
+  }
+}
