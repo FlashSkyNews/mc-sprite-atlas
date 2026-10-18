@@ -8,7 +8,7 @@ Alle Vanilla-Sprites von Minecraft ab 1.21.9 mit MiniMessage-Tags, dazu ein MOTD
 - `public/data/versions.json` + `public/data/<version>.json`: Sprites pro Version, gepflegt vom Update-Skript
 - `functions/api/status.js`: Pages Function, die einen Java-Server per Server List Ping abfragt (TCP über `cloudflare:sockets`, SRV über DNS-over-HTTPS)
 - `scripts/update-sprites.mjs`: liest Mojangs Versionsmanifest, lädt neue Client-JARs, prüft die SHA-1 und erzeugt die Sprite-Daten aus den Atlas-Definitionen
-- `setup/update-sprites.yml`: GitHub-Actions-Job, der das Update täglich ausführt und neue Versionen committet (gehört nach `.github/workflows/`, siehe Einrichten)
+- `.github/workflows/update-sprites.yml`: führt das Update täglich aus und committet neue Versionen
 - `public/og.png`, `favicon.png`, `robots.txt`, `sitemap.xml`, `_headers`: Vorschaubild für Discord & Co., Icons, SEO und Cache-Regeln
 - `test/fake-mc.mjs`: Fake-Minecraft-Server zum lokalen Testen
 
@@ -16,9 +16,8 @@ Live: https://motdpreviewer.kay0.io/ — Meta-Tags, `robots.txt`, `sitemap.xml` 
 
 ## Einrichten
 
-1. Den täglichen Job aktivieren: Auf GitHub **Add file → Create new file**, als Namen `.github/workflows/update-sprites.yml` eintragen und den Inhalt von [`setup/update-sprites.yml`](setup/update-sprites.yml) hineinkopieren. Danach kann `setup/` gelöscht werden.
-2. In Cloudflare: Workers & Pages → Erstellen → Pages → **Mit Git verbinden** → Repo wählen. Build-Befehl leer lassen, Ausgabeordner `public`. Ab jetzt deployt jeder Push automatisch, auch die Commits vom Update-Job.
-3. Fertig. Der Job läuft täglich um 05:17 UTC. Manuell starten: GitHub → Actions → „Sprites aktualisieren“ → Run workflow.
+1. In Cloudflare: Workers & Pages → Erstellen → Pages → **Mit Git verbinden** → Repo wählen. Build-Befehl leer lassen, Ausgabeordner `public`. Ab jetzt deployt jeder Push automatisch, auch die Commits vom Update-Job.
+2. Fertig. Der Job läuft täglich um 05:17 UTC. Manuell starten: GitHub → Actions → „Sprites aktualisieren“ → Run workflow.
 
 Ohne Git-Verbindung geht es auch: Lege im Repo die Secrets `CLOUDFLARE_API_TOKEN` (Berechtigung „Cloudflare Pages: Bearbeiten“) und `CLOUDFLARE_ACCOUNT_ID` an. Dann deployt der Job selbst mit Wrangler.
 
